@@ -1,0 +1,373 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("images/GothamBook.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Gotham";
+}
+
+main {
+  width: 100%;
+  height: max-content;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 0;
+  padding-left: 50px;
+  padding-right: 20px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 3px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 0.89rem;
+  padding: 7px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+nav .tds-icon {
+  height: 100%;
+  width: 120px;
+}
+
+header {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 20px;
+  font-size: 500;
+  height: 100vh;
+  background: url(images/City.jpg);
+  background-size: cover;
+  background-position: center;
+  justify-content: end;
+}
+
+.brv {
+  background-image: url(images/BRV.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.civic {
+  background-image: url(images/Civic.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hrv {
+  background-image: url(images/HRV.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.Accord {
+  background-image: url(images/Accord.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+header .head {
+  margin-top: 10px;
+  position: fixed;
+  top: 100px;
+  align-self: center;
+  transition: opacity 0.3s;
+  visibility: collapse;
+}
+
+header .head:nth-child(2) {
+  visibility: visible;
+}
+.head.visible {
+  visibility: visible;
+}
+.links.visible {
+  visibility: visible;
+}
+.fa-chevron-down.visible {
+  visibility: visible;
+}
+.Accord .links {
+  visibility: hidden;
+  bottom: 8rem;
+}
+.head h1 {
+  margin-bottom: 12px;
+  font-weight: 900;
+  font-size: 3vw;
+  color: rgb(31, 29, 29);
+}
+
+header .head a {
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  color: black;
+  font-size: 1vw;
+}
+
+.links {
+  font-size: 16px;
+  width: fit-content;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: fixed;
+  bottom: 6.2rem;
+  visibility: collapse;
+  transition: opacity 0.3s;
+}
+
+.city .links {
+  visibility: visible;
+}
+.links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1vw;
+  width: 255px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgb(31, 29, 29);
+  margin-bottom: 20px;
+  white-space: nowrap;
+  margin: 0 13px 10px;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  align-items: center;
+  justify-content: end;
+  padding-bottom: 30px;
+}
+
+.fa-chevron-down {
+  font-size: 18px;
+  color: rgb(22, 22, 22);
+  cursor: pointer;
+  align-self: center;
+  margin-bottom: 0px;
+  transition: opacity 0.3s;
+}
+
+.links a:nth-child(2) {
+  color: gray;
+  background-color: rgba(250, 246, 246, 0.788);
+}
+
+nav ul li a:hover {
+  background-color: rgba(128, 128, 128, 0.144);
+}
+
+header p a:hover {
+  border-bottom: 2px solid black;
+}
+
+main > ul {
+  padding: 0 30px;
+  padding-top: 20px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 22%;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  will-change: scroll-position;
+  z-index: 1;
+}
+
+main > ul.display {
+  display: block;
+}
+
+main > ul li:first-child {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+  flex: 1;
+  background-color: white;
+}
+
+main > ul li {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  justify-content: left;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+main > ul li:hover {
+  background-color: rgba(128, 128, 128, 0.123);
+}
+
+main > ul li:first-child:hover {
+  background-color: transparent;
+}
+
+main > ul li a {
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(83, 83, 83);
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+main > ul li a:hover {
+  background-color: transparent;
+}
+
+.close-icon {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.blur {
+  filter: blur(4px);
+  background-color: rgba(128, 128, 128, 0.089);
+  user-select: none;
+  pointer-events: none;
+}
+
+.fade {
+  opacity: 0.5;
+}
+.faddee {
+  opacity: 0.5;
+}
+
+.fade-more {
+  opacity: 0;
+}
+
+@media (max-width: 1200px) {
+  nav ul {
+    display: none;
+  }
+}
+::-webkit-scrollbar {
+  background-color: lightgray;
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: lightgray;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(151, 151, 151);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(95, 95, 95);
+}
+.last-page {
+  min-height: 100vh;
+}
+footer {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer ul {
+  display: flex;
+  width: 57%;
+  padding: 0 5rem;
+  justify-content: space-between;
+}
+footer ul li {
+  list-style: none;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: rgb(100, 100, 100);
+  font-size: 0.8vw;
+  white-space: nowrap;
+}
+@media (max-width: 500px) {
+  footer ul {
+    flex-direction: column;
+  }
+  .Accord .links {
+    bottom: 20rem;
+  }
+  footer {
+    margin-bottom: 4rem;
+  }
+  .links a {
+    font-size: 3vw;
+    width: 200px;
+    height: 20px;
+  }
+  .head h1 {
+    font-size: 4vw;
+  }
+}
+@media (max-width: 950px) {
+  footer ul {
+    flex-wrap: wrap;
+  }
+  .links a {
+    font-size: 10px;
+    width: 200px;
+    height: 25px;
+  }
+  .head h1 {
+    font-size: 25px;
+  }
+  header .head a {
+    font-size: 10px;
+  }
+}
